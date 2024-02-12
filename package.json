@@ -12,6 +12,7 @@
   "dependencies": {
     "@alpinejs/collapse": "3.12.3",
     "@astrojs/tailwind": "4.0.0",
+    "@clerk/clerk-js": "^4.70.0",
     "@fontsource/inter": "5.0.8",
     "@types/alpinejs": "3.7.2",
     "alpinejs": "3.12.3",

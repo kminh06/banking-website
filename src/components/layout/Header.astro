@@ -29,7 +29,7 @@ const links = [
   :class="{ 'bg-primary-500/10 dark:bg-primary-400/10': open, 'bg-primary-50 dark:bg-primary-950': !(open) }"
 >
   <div
-    class="mx-auto flex max-w-2xl flex-row items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8"
+    class="mx-auto flex max-w-2xl flex-row items-end justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8"
   >
     <!-- Brand logo -->
     <div class="flex">
@@ -39,8 +39,8 @@ const links = [
       >
         <span class="sr-only">Stone</span>
         <img
-          class="h-10 w-auto"
-          :src="$store.theme.isDark ? '/assets/logo-dark.png' : '/assets/logo-light.png'"
+          class="h-12 w-auto"
+          :src="$store.theme.isDark ? '/assets/tib-dark.png' : '/assets/tib-light.png'"
           alt="Stone"
         />
       </a>
