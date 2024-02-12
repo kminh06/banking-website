@@ -1,7 +1,7 @@
 {
-  "name": "astro-theme-stone",
+  "name": "bank-landing",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
