@@ -3,7 +3,11 @@
   method="POST"
   class="flex flex-col gap-y-6 rounded-2xl border-2 border-primary-300 p-8 shadow-2xl shadow-primary-400 dark:border-primary-600 dark:shadow-primary-600"
 >
-  <h2 class="text-2xl font-medium text-primary-950 dark:text-primary-100">START EARNING</h2>
+  <div>
+    <h2 class="font-serif text-2xl text-primary-900 dark:text-primary-100">Start Earning Today!</h2>
+    <h3 class="text-sm text-primary-600 dark:text-primary-300">Create your account.</h3>
+  </div>
+
   <!-- Full name input -->
   <div>
     <label for="full-name" class="sr-only">Full name</label>
@@ -12,7 +16,7 @@
       name="full-name"
       id="full-name"
       autocomplete="name"
-      class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-300 transition placeholder:text-primary-950/60 hover:ring-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
+      class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-3 text-base ring-1 ring-primary-300 transition placeholder:text-primary-950/60 hover:ring-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
       placeholder="Full name"
     />
   </div>
@@ -25,16 +29,23 @@
       name="email"
       id="email"
       autocomplete="email"
-      class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-4 text-base ring-1 ring-primary-300 transition placeholder:text-primary-950/60 hover:ring-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
+      class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-3 text-base ring-1 ring-primary-300 transition placeholder:text-primary-950/60 hover:ring-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
       placeholder="Email"
     />
   </div>
-  <div>
+  <div class="flex w-full flex-row items-center justify-center">
     <button
-      class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-100 dark:text-primary-950 dark:hover:bg-primary-200 dark:focus-visible:outline-primary-400"
+      class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-12 py-1.5 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-100 dark:text-primary-950 dark:hover:bg-primary-200 dark:focus-visible:outline-primary-400"
       type="submit"
     >
-      Create Account
+      Register
     </button>
+    <p class="flex-grow text-center">or</p>
+    <a
+      class="cursor-pointer py-1.5 pr-4 text-base font-medium text-primary-600 underline-offset-4 transition-all hover:underline dark:text-primary-200"
+      type="submit"
+    >
+      Sign In
+    </a>
   </div>
 </form>

@@ -14,6 +14,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+      serif: ['Georgia', 'serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
