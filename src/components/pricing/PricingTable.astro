@@ -1,35 +1,35 @@
 ---
 const pricing = [
   {
-    name: 'Basic',
-    description: 'For development, staging, and small production projects.',
-    periodicity: '/month',
-    price: '$10',
+    name: 'Savings Basic',
+    description: 'For secure short-term cash management. 6 month term.',
+    periodicity: 'APY',
+    price: '6.50%',
     action: 'Buy Now',
-    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+    features: ['Online Banking', '0% Fees', 'Email Support', '$50 minimum balance'],
   },
   {
-    name: 'Pro',
-    description: 'For high-scale and mission critical projects.',
+    name: 'Savings Platinum',
+    description: 'For secure long-term cash management with high interest. 12 month term.',
     isFlagged: true,
-    periodicity: '/month',
-    price: '$25',
+    periodicity: 'APY',
+    price: '8.00%',
     action: 'Buy Now',
-    features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
+    features: ['Online Banking', '0% Fees', 'Email and Chat Support', '$50 minimum balance'],
   },
   {
-    name: 'Team',
-    description: 'For teams with more security, support, and performance needs.',
+    name: 'Portfolio',
+    description: 'For those that require personalized investment management.',
     periodicity: '',
     price: 'Custom',
     action: 'Buy Now',
     features: [
-      'Unlimited Seats',
-      'Unlimited Projects',
-      'Lifetime access',
+      'Online Banking',
+      'Management fees',
       'Email and Chat Support',
-      'High-Performance',
-      'Free updates',
+      'No minimum balance',
+      'Advisor Calls',
+      'Weekly Reports',
     ],
   },
 ];
@@ -50,17 +50,17 @@ const pricing = [
               <h2 class="text-xl font-medium">{item.name}</h2>
               <p class="mt-4 flex items-baseline">
                 <span class="text-4xl font-medium tracking-tight">{item.price}</span>
-                <span class="text-primary-950/70 dark:text-primary-200/70 ml-1 text-sm font-medium">
+                <span class="ml-1 text-sm font-medium text-primary-950/70 dark:text-primary-200/70">
                   {item.periodicity}
                 </span>
               </p>
-              <p class="text-primary-950/70 dark:text-primary-200/70 mt-6">{item.description}</p>
+              <p class="mt-6 text-primary-950/70 dark:text-primary-200/70">{item.description}</p>
 
               <ul role="list" class="mt-6 space-y-6">
                 {item.features.map((feature) => (
                   <li class="flex gap-3">
                     <svg
-                      class="text-primary-600 dark:text-primary-400 h-6 w-6 flex-shrink-0"
+                      class="h-6 w-6 flex-shrink-0 text-primary-600 dark:text-primary-400"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -75,7 +75,7 @@ const pricing = [
             </div>
             <a
               href="#"
-              class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex w-full items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="inline-flex w-full items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
             >
               Buy now
             </a>

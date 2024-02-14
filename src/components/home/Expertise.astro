@@ -2,39 +2,39 @@
 const features = [
   {
     id: 'expertise-1',
-    name: 'Digital Experience Platforms',
+    name: 'Wealth Management',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Our wealth management expertise offers personalized strategies to grow and protect your assets, ensuring long-term financial security and prosperity.',
   },
   {
     id: 'expertise-2',
-    name: 'Web & Mobile Development',
+    name: 'Risk Assessment',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Leveraging advanced risk assessment techniques, we analyze potential risks to your investments, allowing us to make informed decisions and safeguard your portfolio.',
   },
   {
     id: 'expertise-3',
-    name: 'Serverless Computing Platforms',
+    name: 'Financial Planning',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Our financial planning services help you map out your financial goals and create a customized roadmap to achieve them, providing clarity and peace of mind for your future.',
   },
   {
     id: 'expertise-4',
-    name: 'Build & Test Automation Tools',
+    name: 'Investment Advisory',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'With our investment advisory services, our seasoned professionals provide insightful guidance and recommendations to help you navigate the complexities of the financial markets and make informed investment decisions.',
   },
   {
     id: 'expertise-5',
-    name: 'Artificial Intelligence',
+    name: 'Online Banking Solutions',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Our expertise in web & mobile banking solutions allows you to manage your finances conveniently from anywhere, at any time.',
   },
   {
     id: 'expertise-6',
-    name: 'Full project support',
+    name: 'Fintech Integration',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'With our fintech integration expertise, we seamlessly incorporate the latest financial technologies into our services, providing you with innovative tools and functionalities to enhance your banking experience and achieve your financial goals.',
   },
 ];
 ---
@@ -68,11 +68,11 @@ const features = [
                     aria-expanded="false"
                     x-bind:aria-expanded="isOpen.toString()"
                   >
-                    <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
                       <span class="font-medium">{feature.name}</span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg
-                          class="text-primary-600 dark:text-primary-400 h-6 w-6 rotate-0 transform transition duration-200 ease-in-out"
+                          class="h-6 w-6 rotate-0 transform text-primary-600 transition duration-200 ease-in-out dark:text-primary-400"
                           x-bind:class="{ '-rotate-180': isOpen, 'rotate-0': !isOpen }"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ const features = [
                   </button>
                 </dt>
                 <dd class="pb-6 pr-6" id={feature.id} x-show="isOpen" x-cloak x-collapse>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">
                     {feature.description}
                   </p>
                 </dd>
