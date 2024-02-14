@@ -2,39 +2,38 @@
 const questions = [
   {
     id: 'faq-1',
-    title: 'How do I know which pricing plan is right for me?',
+    title: 'How do I know which plan is right for me?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      "Choosing the right plan depends on your financial goals and preferences. Our team is here to help you assess your needs and find the plan that best fits your objectives, whether it's saving for the future, accessing premium benefits, or managing your wealth.",
   },
   {
     id: 'faq-2',
     title: 'How can I upgrade, downgrade, or cancel my plan?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      "You can easily upgrade, downgrade, or cancel your plan by contacting our customer support team. We'll assist you promptly with any changes to ensure your banking experience meets your evolving needs.",
   },
-  {
-    id: 'faq-3',
-    title: "What does 'lifetime access' mean exactly?",
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-4',
-    title: "What does 'free updates' mean exactly?",
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
-  {
-    id: 'faq-5',
-    title: 'Do you offer a free trial?',
-    answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
-  },
+  // {
+  //   id: 'faq-3',
+  //   title: "What does 'lifetime access' mean exactly?",
+  //   answer:
+  //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+  // },
+  // {
+  //   id: 'faq-4',
+  //   title: "What does 'free updates' mean exactly?",
+  //   answer:
+  //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+  // },
+  // {
+  //   id: 'faq-5',
+  //   title: 'Do you offer a free trial?',
+  //   answer: 'Unfortunately, we currently do not offer a free trial.',
+  // },
   {
     id: 'faq-6',
     title: 'How can I request support?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.',
+      "You can request support by reaching out to our customer service team via email at support@thomasinvestmentbank.com. We're committed to assist you promptly with any questions or concerns you may have.",
   },
 ];
 ---
@@ -70,11 +69,11 @@ const questions = [
                     aria-expanded="false"
                     x-bind:aria-expanded="isOpen.toString()"
                   >
-                    <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
                       <span class="font-medium">{question.title}</span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg
-                          class="text-primary-600 dark:text-primary-400 h-6 w-6 rotate-0 transform transition duration-200 ease-in-out"
+                          class="h-6 w-6 rotate-0 transform text-primary-600 transition duration-200 ease-in-out dark:text-primary-400"
                           x-bind:class="{ '-rotate-180': isOpen, 'rotate-0': !isOpen }"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -88,7 +87,7 @@ const questions = [
                   </button>
                 </dt>
                 <dd class="pb-6 pr-6" id={question.id} x-show="isOpen" x-cloak x-collapse>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">
                     {question.answer}
                   </p>
                 </dd>
