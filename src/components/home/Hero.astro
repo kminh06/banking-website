@@ -1,5 +1,5 @@
 ---
-import Form from './Form.astro';
+import Form from './react/Form';
 ---
 
 <section class="py-16 sm:py-20">
@@ -23,7 +23,7 @@ import Form from './Form.astro';
           </a>
         </div>
         <div class="hidden lg:block">
-          <Form />
+          <Form client:load />
         </div>
       </div>
 

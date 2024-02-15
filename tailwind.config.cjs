@@ -6,15 +6,17 @@ module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    colors: {
-      current: 'currentColor',
-      transparent: 'transparent',
-      white: '#ffffff',
-      primary: colors.gray,
-    },
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Georgia', 'serif'],
+    extend: {
+      colors: {
+        current: 'currentColor',
+        transparent: 'transparent',
+        white: '#ffffff',
+        primary: colors.gray,
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
+      },
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

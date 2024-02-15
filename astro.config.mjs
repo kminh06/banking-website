@@ -5,14 +5,23 @@ import robotsTxt from 'astro-robots-txt';
 import vercel from '@astrojs/vercel/serverless';
 import sitemap from '@astrojs/sitemap';
 
-import react from "@astrojs/react";
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    viewTransitions: true
-  },
+  // experimental: {
+  //   viewTransitions: true,
+  // },
   output: 'hybrid',
   site: 'https://www.thomasinvestmentbank.com',
-  integrations: [tailwind(), compress(), robotsTxt(), sitemap(), vercel(), react()]
+  integrations: [
+    tailwind(),
+    compress(),
+    robotsTxt(),
+    sitemap(),
+    vercel(),
+    react({
+      include: ['**/react/*'],
+    }),
+  ],
 });

@@ -1,5 +1,4 @@
 import Mailjet from 'node-mailjet';
-
 export const prerender = false;
 
 async function sendEmail(email, name) {
@@ -36,20 +35,22 @@ async function sendEmail(email, name) {
   }
 }
 
-export async function POST({ request }) {
-  const data = await request.json();
-  const { name, email } = data;
+export const POST = async ({ request }) => {
+  try {
+    const body = await request.json();
+    const { name, email } = body;
+    await sendEmail(email, name);
 
-  await sendEmail(email, name);
-
-  return new Response(
-    JSON.stringify({
-      message: 'success',
-    }),
-    {
-      status: 200,
-    }
-  );
-
-  return new Response(null, { status: 400 });
-}
+    return new Response(
+      JSON.stringify({
+        message: 'Success',
+      }),
+      {
+        status: 200,
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return new Response(null, { status: 500 });
+  }
+};
