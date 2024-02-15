@@ -5,7 +5,7 @@ import robotsTxt from 'astro-robots-txt';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
-import vercel from "@astrojs/vercel/serverless";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,5 +17,5 @@ export default defineConfig({
   integrations: [tailwind(), compress(), robotsTxt(), sitemap(), react({
     include: ['**/react/*']
   })],
-  adapter: vercel()
+  adapter: netlify()
 });
