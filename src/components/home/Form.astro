@@ -1,5 +1,5 @@
 <form
-  action="#"
+  action="/api/signup"
   method="POST"
   class="flex flex-col gap-y-6 rounded-2xl border-2 border-primary-300 p-8 shadow-2xl shadow-primary-400 dark:border-primary-600 dark:shadow-primary-600"
 >
@@ -7,22 +7,18 @@
     <h2 class="font-serif text-3xl text-primary-900 dark:text-primary-100">Start earning now!</h2>
     <h3 class="text-sm text-primary-600 dark:text-primary-300">Create your account.</h3>
   </div>
-
-  <!-- Full name input -->
   <div>
-    <label for="full-name" class="sr-only">Full name</label>
+    <label for="name" class="sr-only">Full name</label>
     <input
       type="text"
       required
-      name="full-name"
-      id="full-name"
+      name="name"
+      id="name"
       autocomplete="name"
       class="block w-full appearance-none rounded-md border-0 bg-primary-50 px-4 py-3 text-base ring-1 ring-primary-300 transition placeholder:text-primary-950/60 hover:ring-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 dark:bg-primary-950 dark:ring-primary-200/40 dark:placeholder:text-primary-200/60 dark:hover:ring-primary-400 dark:focus:ring-primary-400"
       placeholder="Full name"
     />
   </div>
-
-  <!-- Email input -->
   <div class="w-72">
     <label for="email" class="sr-only">Email</label>
     <input
@@ -51,3 +47,20 @@
     </a>
   </div>
 </form>
+<script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+    });
+    const data = await response.json();
+    if (response.ok) {
+      window.location.href = '/';
+    } else {
+      alert(data.message);
+    }
+  });
+</script>

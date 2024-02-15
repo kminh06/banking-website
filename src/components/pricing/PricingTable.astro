@@ -4,8 +4,9 @@ const pricing = [
     name: 'Savings Basic',
     description: 'For secure short-term cash management. 6 month term.',
     periodicity: 'APY',
-    price: '6.50%',
-    action: 'Buy Now',
+    price: '6.55%',
+    action: 'Sign Up',
+    href: '/signup',
     features: ['Online Banking', '0% Fees', 'Email Support', '$50 minimum balance'],
   },
   {
@@ -13,8 +14,9 @@ const pricing = [
     description: 'For secure long-term cash management with high interest. 12 month term.',
     isFlagged: true,
     periodicity: 'APY',
-    price: '8.00%',
-    action: 'Buy Now',
+    price: '8.10%',
+    action: 'Sign Up',
+    href: '/signup',
     features: ['Online Banking', '0% Fees', 'Email and Chat Support', '$50 minimum balance'],
   },
   {
@@ -22,7 +24,8 @@ const pricing = [
     description: 'For those that require personalized investment management.',
     periodicity: '',
     price: 'Custom',
-    action: 'Buy Now',
+    action: 'Contact Us',
+    href: '/contact',
     features: [
       'Online Banking',
       'Management fees',
@@ -74,10 +77,10 @@ const pricing = [
               </ul>
             </div>
             <a
-              href="#"
+              href={item.href}
               class="inline-flex w-full items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-100 dark:text-primary-950 dark:hover:bg-primary-200 dark:focus-visible:outline-primary-400"
             >
-              Buy now
+              {item.action}
             </a>
           </div>
         ))
