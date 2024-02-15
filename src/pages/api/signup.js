@@ -36,10 +36,9 @@ async function sendEmail(email, name) {
   }
 }
 
-export const POST = async ({ request }) => {
-  const data = await request.formData();
-  const name = data.get('name');
-  const email = data.get('email');
+export async function POST({ request }) {
+  const data = await request.json();
+  const { name, email } = data;
 
   await sendEmail(email, name);
 
@@ -53,4 +52,4 @@ export const POST = async ({ request }) => {
   );
 
   return new Response(null, { status: 400 });
-};
+}

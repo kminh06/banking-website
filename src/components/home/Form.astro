@@ -1,6 +1,4 @@
 <form
-  action="/api/signup"
-  method="POST"
   class="flex flex-col gap-y-6 rounded-2xl border-2 border-primary-300 p-8 shadow-2xl shadow-primary-400 dark:border-primary-600 dark:shadow-primary-600"
 >
   <div>
@@ -33,8 +31,8 @@
   </div>
   <div class="flex w-full flex-row items-center justify-center">
     <button
+      id="submit"
       class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-12 py-1.5 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-100 dark:text-primary-950 dark:hover:bg-primary-200 dark:focus-visible:outline-primary-400"
-      type="submit"
     >
       Register
     </button>
@@ -48,19 +46,21 @@
   </div>
 </form>
 <script>
-  const form = document.querySelector('form');
-  form.addEventListener('submit', async (e) => {
+  //listen to button click and fetch
+  document.getElementById('submit').addEventListener('click', async (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    const response = await fetch('/api/signup', {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+      }),
     });
-    const data = await response.json();
-    if (response.ok) {
-      window.location.href = '/';
-    } else {
-      alert(data.message);
-    }
   });
 </script>
