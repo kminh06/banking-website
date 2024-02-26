@@ -9,22 +9,18 @@ async function sendEmail(email, name) {
       Messages: [
         {
           From: {
-            Email: 'daukhacminh006@gmail.com',
+            Email: 'support@thomasinvestmentbank.com',
             Name: 'Thomas Investment Bank',
           },
           To: [
             {
-              Email: 'daukhacminh006@gmail.com',
-              Name: 'CEO',
+              Email: email,
+              Name: name,
             },
           ],
-          Subject: 'TIB New Sign Up',
-          TemplateID: 5697483,
+          Subject: 'Account Opening Request Received',
+          TemplateID: 5729636,
           TemplateLanguage: true,
-          Variables: {
-            name: name,
-            email: email,
-          },
         },
       ],
     });

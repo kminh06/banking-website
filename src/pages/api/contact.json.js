@@ -9,13 +9,13 @@ async function sendEmail(email, name, message) {
       Messages: [
         {
           From: {
-            Email: 'daukhacminh006@gmail.com',
-            Name: 'Thomas Investment Bank',
+            Email: email,
+            Name: name,
           },
           To: [
             {
-              Email: 'daukhacminh006@gmail.com',
-              Name: 'CEO',
+              Email: 'support@thomasinvestmentbank.com',
+              Name: 'Thomas Investment Bank Team',
             },
           ],
           Subject: 'TIB Contact Message',
